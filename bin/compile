@@ -34,7 +34,9 @@ echo "-----> Using Zotonic ${z_ver}"
 
     #rm -rf ${cache}/* # be sure not to build up cruft
     cd ${cache}
+    echo "-----> cache dir:: $cache"
     echo "-------> Fetching Erlang/OTP $ver"
+    echo "-----> OTP_TARBALL_URL:: $OTP_TARBALL_URL"
     curl -sO ${OTP_TARBALL_URL} || exit 1
 )
 (

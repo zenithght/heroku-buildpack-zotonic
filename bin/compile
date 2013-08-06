@@ -49,6 +49,7 @@ echo "-----> Using Zotonic ${z_ver}"
     #rm -rf ${cache}/* # be sure not to build up cruft
     cd ${cache}
     echo "-------> Fetching Zotonic ${z_ver}"
+    echo "-------> ZOTONIC_TARBALL_URL:: ${ZOTONIC_TARBALL_URL}"
     curl -s ${ZOTONIC_TARBALL_URL} > $z_tarball || exit 1
 )
 
@@ -66,7 +67,7 @@ ${ERLROOT}/Install -minimal /app/otp
 
 echo "-------> Unpacking Zotonic ${z_ver}"
 mkdir -p ${Z_ROOT}
-tar zxf ${cache}/${z_tarball} -C ${build} --strip-components=1
+tar -zcvf ${cache}/${z_tarball} -C ${build} --strip-components=1
 
 rm -Rf ${build}/priv/sites/*
 

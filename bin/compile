@@ -22,8 +22,7 @@ Z_ROOT=${build}/zotonic
 PROFILE=${HOME}/.profile.d
 z_ver="master"
 
-#ZOTONIC_TARBALL_URL="https://nodeload.github.com/zotonic/zotonic/tar.gz/${z_ver}"
-ZOTONIC_TARBALL_URL="https://github.com/zotonic/zotonic/archive/${z_ver}.tar.gz"
+ZOTONIC_TARBALL_URL="https://codeload.github.com/zotonic/zotonic/tar.gz/${z_ver}"
 z_tarball="zotonic-${z_ver}.tar.gz"
 echo "-----> Using Erlang/OTP $ver"
 echo "-----> Using Zotonic ${z_ver}"

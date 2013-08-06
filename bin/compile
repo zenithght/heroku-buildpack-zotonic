@@ -66,7 +66,7 @@ ${ERLROOT}/Install -minimal /app/otp
 
 echo "-------> Unpacking Zotonic ${z_ver}"
 mkdir -p ${Z_ROOT}
-tar -zcvf ${cache}/${z_tarball} -C ${build} --strip-components=1
+tar zxf ${cache}/${z_tarball} -C ${build} --strip-components=1
 
 rm -Rf ${build}/priv/sites/*
 
